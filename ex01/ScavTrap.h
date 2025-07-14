@@ -1,14 +1,13 @@
 #ifndef SCAVTRAP_H
 #define SCAVTRAP_H
 
-class ScavTrap {
-public:
-    ScavTrap();
-    ~ScavTrap();
+#include "ClapTrap.h"
 
-    ScavTrap(const ScavTrap&);
-    ScavTrap& operator=(const ScavTrap&);
-private:
+class ScavTrap : public ClapTrap {
+public:
+    ScavTrap(const std::string &name);
+    ~ScavTrap();
+    void guardGate() const;
 };
 
-#endif // SCAVTRAP_H
+#endif // SCAVT RAP_H

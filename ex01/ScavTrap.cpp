@@ -1,13 +1,20 @@
 #include "ScavTrap.h"
 
-ScavTrap::ScavTrap() {}
+#include <iostream>
 
-ScavTrap::~ScavTrap() {}
-
-ScavTrap::ScavTrap(const ScavTrap& other) {}
-
-ScavTrap& ScavTrap::operator=(const ScavTrap& other) {
-    if (this != &other) {
-    }
-    return *this;
+ScavTrap::ScavTrap(const std::string &name) : ClapTrap(name, 100, 50, 20)
+{
+    std::cout << "\033[1mScavTrap\033[0m: \033[1m" << getName() << "\033[0m " << "\033[32mconstructed!\033[0m"
+              << std::endl;
+}
+ScavTrap::~ScavTrap()
+{
+    std::cout << "\033[1mScavTrap\033[0m: \033[1m" << getName() << "\033[0m " << "\033[31mdestroyed!\033[0m"
+              << std::endl;
+}
+void
+ScavTrap::guardGate() const
+{
+    std::cout << "\033[1mScavTrap\033[0m: \033[1m" << getName() << "\033[0m "
+              << "\033[36mis now in Gate Keeper mode!\033[0m" << std::endl;
 }
