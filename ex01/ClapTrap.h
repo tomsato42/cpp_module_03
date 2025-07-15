@@ -34,6 +34,12 @@ public:
     setHitPoints(unsigned int hitPoints);
     void
     setEnergyPoints(unsigned int energyPoints);
+    static unsigned int
+    getDefaultHitPoints();
+    static unsigned int
+    getDefaultEnergyPoints();
+    static unsigned int
+    getDefaultAttackDamage();
 
 private:
     const std::string name_;

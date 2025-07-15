@@ -5,7 +5,6 @@
 class ClapTrap
 {
 public:
-    ClapTrap();
     ClapTrap(const std::string &name);
     ClapTrap(const std::string &name, const unsigned int hitPoints, const unsigned int energyPoints,
              const unsigned int _attackDamage);
@@ -35,6 +34,12 @@ public:
     setHitPoints(unsigned int hitPoints);
     void
     setEnergyPoints(unsigned int energyPoints);
+    static unsigned int
+    getDefaultHitPoints();
+    static unsigned int
+    getDefaultEnergyPoints();
+    static unsigned int
+    getDefaultAttackDamage();
 
 private:
     const std::string name_;

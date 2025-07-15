@@ -3,12 +3,19 @@
 
 #include "ClapTrap.h"
 
-class ScavTrap : public ClapTrap {
+class ScavTrap : virtual public ClapTrap {
 public:
     ScavTrap(const std::string &name);
     ~ScavTrap();
     void guardGate();
-    void attack(const std::string &target);
+    void
+    attack(const std::string &target);
+    static unsigned int
+    getDefaultHitPoints();
+    static unsigned int
+    getDefaultEnergyPoints();
+    static unsigned int
+    getDefaultAttackDamage();
 };
 
-#endif // SCAVT RAP_H
+#endif // SCAVTRAP_H

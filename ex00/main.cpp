@@ -11,9 +11,13 @@ int main() {
     ClapTrap anotherClapTrap = clapTrap; // Copy constructor
     anotherClapTrap.attack("target2");
 
-    ClapTrap yetAnotherClapTrap;
-    yetAnotherClapTrap = clapTrap; // Assignment operator
+    ClapTrap yetAnotherClapTrap = clapTrap; // Assignment operator
     yetAnotherClapTrap.attack("target3");
+
+    for (int i = 0; i < 9; i++)
+    {
+        clapTrap.attack("target1");
+    }
 
     return 0;
 }

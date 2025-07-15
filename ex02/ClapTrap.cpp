@@ -2,7 +2,7 @@
 
 #include <iostream>
 
-ClapTrap::ClapTrap(const std::string &name) : name_(name), hitPoints_(10), energyPoints_(10), attackDamage_(0)
+ClapTrap::ClapTrap(const std::string &name) : name_(name), hitPoints_(getDefaultHitPoints()), energyPoints_(getDefaultEnergyPoints()), attackDamage_(getDefaultAttackDamage())
 {
     std::cout << "\033[1mClapTrap\033[0m: \033[1m" << name_ << "\033[0m " << "\033[32mconstructed!\033[0m" << std::endl;
 }
@@ -103,4 +103,20 @@ void
 ClapTrap::setEnergyPoints(unsigned int energyPoints)
 {
     energyPoints_ = energyPoints;
+}
+
+unsigned int
+ClapTrap::getDefaultHitPoints()
+{
+    return 10;
+}
+unsigned int
+ClapTrap::getDefaultEnergyPoints()
+{
+    return 10;
+}
+unsigned int
+ClapTrap::getDefaultAttackDamage()
+{
+    return 0;
 }

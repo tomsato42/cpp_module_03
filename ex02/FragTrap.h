@@ -2,12 +2,17 @@
 #define FRAGTRAP_H
 #include "ClapTrap.h"
 
-class FragTrap : public ClapTrap {
+class FragTrap : virtual public ClapTrap {
 public:
     FragTrap(std::string const &name);
     ~FragTrap();
 
-    void highFivesGuys(void);
+    void
+    highFivesGuys(void);
+    static unsigned int
+    getDefaultHitPoints();
+    static unsigned int getDefaultEnergyPoints();
+    static unsigned int getDefaultAttackDamage();
 private:
 };
 
