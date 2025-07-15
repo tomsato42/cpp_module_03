@@ -1,13 +1,13 @@
 #ifndef FRAGTRAP_H
 #define FRAGTRAP_H
+#include "ClapTrap.h"
 
-class FragTrap {
+class FragTrap : public ClapTrap {
 public:
-    FragTrap();
+    FragTrap(std::string const &name);
     ~FragTrap();
 
-    FragTrap(const FragTrap&);
-    FragTrap& operator=(const FragTrap&);
+    void highFivesGuys(void);
 private:
 };
 
