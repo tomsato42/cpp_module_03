@@ -19,7 +19,7 @@ ScavTrap::guardGate()
               << "\033[36mis now in Gate Keeper mode!\033[0m" << std::endl;
 }
 void
-ScavTrap::attack(const std::string &target)
+ScavTrap::attack(const std::string& target)
 {
     if (getEnergyPoints() <= 0)
     {

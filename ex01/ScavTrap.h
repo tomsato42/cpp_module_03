@@ -9,7 +9,7 @@ public:
     ~ScavTrap();
     void guardGate();
     void
-    attack(const std::string &target);
+    attack(const std::string& target);
     static unsigned int
     getDefaultHitPoints();
     static unsigned int

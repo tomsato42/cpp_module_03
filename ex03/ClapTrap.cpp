@@ -35,7 +35,7 @@ ClapTrap::operator=(const ClapTrap &other)
     return *this;
 }
 void
-ClapTrap::attack(const std::string &target)
+ClapTrap::attack(const std::string& target)
 {
     if (energyPoints_ <= 0)
     {
